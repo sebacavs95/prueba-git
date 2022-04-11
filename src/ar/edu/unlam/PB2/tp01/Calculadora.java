@@ -8,7 +8,7 @@ public class Calculadora {
 	 Integer a;
 	 Integer b;
 	 Integer opcion;
-	 Integer resultado;
+	 Integer resultado = 0;
 	 Scanner teclado = new Scanner(System.in);
 	 
 	 do{
@@ -20,14 +20,15 @@ public class Calculadora {
 	 a = teclado.nextInt();
 	 System.out.println("Ingrese el segundo numero");
 	 b = teclado.nextInt();
-	 if(opcion.equals(1)){
-	 resultado = a + b;
-	 }else if(opcion.equals(2)){
-	 resultado = a - b;
-	 }else if(opcion.equals(3)){
-	 resultado = a * b;
-	 }else{
-	 resultado = a / b;
+	 switch(opcion){
+	 case 1: resultado = a + b;
+	 break;
+	 case 2: resultado = a - b;
+	 break;
+	 case 3: resultado = a * b;
+	 break;
+	 case 4: resultado = a / b;
+	 break;
 	 }
 	 System.out.println("El resultado es " + resultado.toString());
 	 }
